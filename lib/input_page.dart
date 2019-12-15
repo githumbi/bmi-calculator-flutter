@@ -1,4 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'cardContent.dart';
+import 'reusableCard.dart';
+
+const bottomHeightContainer = 80.0;
+const colourCardBackground = Color(0XFF101427);
+const colorBottomButton = Color(0XFF101427);
 
 class InputPage extends StatefulWidget {
   @override
@@ -19,12 +28,20 @@ class _InputPageState extends State<InputPage> {
               children: <Widget>[
                 Expanded(
                   child: ReusableCard(
-                    colour: Color(0XFF101427),
+                    colour: colourCardBackground,
+                    cardChild: CardContent(
+                      iconItem: FontAwesomeIcons.venus,
+                      label: 'man',
+                    ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    colour: Color(0XFF101427),
+                    colour: colourCardBackground,
+                    cardChild: CardContent(
+                      iconItem: FontAwesomeIcons.mars,
+                      label: 'woman',
+                    ),
                   ),
                 ),
               ],
@@ -32,7 +49,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: ReusableCard(
-              colour: Color(0XFF101427),
+              colour: colourCardBackground,
             ),
           ),
           Expanded(
@@ -40,33 +57,35 @@ class _InputPageState extends State<InputPage> {
               children: <Widget>[
                 Expanded(
                   child: ReusableCard(
-                    colour: Color(0XFF101427),
+                    colour: colorBottomButton,
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    colour: Color(0XFF101427),
+                    colour: colourCardBackground,
                   ),
                 ),
               ],
             ),
           ),
+          Container(
+            width: double.infinity,
+            height: bottomHeightContainer,
+            margin: EdgeInsets.only(top: 10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              color: Color(0xFFFF4367),
+            ),
+            child: Text(
+              'calculate your BMI',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          )
         ],
       ),
-    );
-  }
-}
-
-class ReusableCard extends StatelessWidget {
-  ReusableCard({@required this.colour});
-  final Color colour;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(15),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: Color(0XFF101427)),
     );
   }
 }
