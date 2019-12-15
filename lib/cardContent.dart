@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const iconsize = 80.0;
+const iconSize = 80.0;
 const sizeBoxHeight = 20.0;
 
 class CardContent extends StatelessWidget {
@@ -15,7 +15,7 @@ class CardContent extends StatelessWidget {
       children: <Widget>[
         Icon(
           iconItem,
-          size: iconsize,
+          size: iconSize,
         ),
         SizedBox(
           height: sizeBoxHeight,
