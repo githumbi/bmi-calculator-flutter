@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
 
-const iconSize = 80.0;
-const sizeBoxHeight = 20.0;
 
-class CardContent extends StatelessWidget {
-  CardContent({@required this.iconItem, @required this.label});
+
+class IconContent extends StatelessWidget {
+  IconContent({@required this.iconItem, @required this.label});
   final IconData iconItem;
   final String label;
 
@@ -15,12 +15,12 @@ class CardContent extends StatelessWidget {
       children: <Widget>[
         Icon(
           iconItem,
-          size: iconSize,
+          size: 80.0,
         ),
         SizedBox(
-          height: sizeBoxHeight,
+          height:  20.0,
         ),
-        Text(label, style: TextStyle(color: Color(0XFFFCFDFF), fontSize: 20))
+        Text(label, style: kLabelTextStyle),
       ],
     );
   }
