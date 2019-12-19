@@ -7,4 +7,4 @@ const kColorBottomButton = Color(0XFF141A3B);
 
 const kLabelTextStyle = TextStyle(color: Color(0XFFFCFDFF), fontSize: 20);
 
-const kNumberTextStyle = TextStyle(fontSize: 60, fontWeight: FontWeight.w900);
+const kNumberTextStyle = TextStyle(fontSize: 60, fontWeight: FontWeight.w800);
